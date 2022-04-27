@@ -46,8 +46,8 @@ GITFORK : https://git-fork.com/
 ## 설치
 ### XAMPP 를 사용할 경우 
 ```bash
-# xampp 디렉토리 이동 (기존 htdocs 삭제)
-# cmd 또는 터미얼을 열어 프로젝트 Clone 
+# 1. xampp 디렉토리의 기존 htdocs 폴더를 삭제하여 해당 디렉토리를 cmd 또는 터미얼을 열어준다.
+# 2. 프로젝트를 Clone 받는다. 
 git clone git@github.com:Kyungseo-Park/legacy-php-tutorial.git htdocs
 ```
 ### Docker
@@ -57,7 +57,11 @@ cd ./legacy-php-tutorial
 docker-compose up -d 
 ```
 
-
+### 접속
+1. [web] - http://localhost  
+2. [phpmyadmin-xampp] : http://localhost/phpmyadmin
+2. [phpmyadmin-docker] : http://localhost:8000
+<img src="./git-image/localhost.png" />
 
 ## With a rdf library
 
