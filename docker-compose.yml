@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:8.0.28
+    volumes:
+      - "./data:/var/lib/mysql:rw"
+    environment:
+      - "MYSQL_DATABASE=database_name"
+      - "MYSQL_USER=user_name"
+      - "MYSQL_PASSWORD=user_password"
+      - "MYSQL_ROOT_PASSWORD=password"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+    environment:
+      - "PMA_HOST=db"
+      - "PMA_USER=root"
+      - "PMA_PASSWORD=root"
+  web:
+    image: php:7.1-apache
+    volumes:
+      - ".:/var/www/html"
+    depends_on:
+      - db
+    ports:
+      - "80:80"
