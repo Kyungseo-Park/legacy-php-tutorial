@@ -26,7 +26,8 @@ services:
       - "PMA_PASSWORD=password"
   web:
     container_name: legacy-php71
-    image: php:7.1-apache
+    build:
+      context: .
     volumes:
       - ".:/var/www/html"
     depends_on:
