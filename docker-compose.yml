@@ -2,6 +2,7 @@ version: '3'
 
 services:
   db:
+    container_name: legacy-db
     image: mysql:8.0.28
     volumes:
       - "./data:/var/lib/mysql:rw"
@@ -10,17 +11,21 @@ services:
       - "MYSQL_USER=user_name"
       - "MYSQL_PASSWORD=user_password"
       - "MYSQL_ROOT_PASSWORD=password"
+      - TZ=Asia/Seoul
+    command: [ 'mysqld', '--default-authentication-plugin=mysql_native_password' ]
   phpmyadmin:
+    container_name: legacy-phpmyadmin
     image: phpmyadmin/phpmyadmin:4.7
     depends_on:
       - db
     ports:
       - "8000:80"
     environment:
-      - "PMA_HOST=db"
+      - "PMA_HOST=legacy-db"
       - "PMA_USER=root"
-      - "PMA_PASSWORD=root"
+      - "PMA_PASSWORD=password"
   web:
+    container_name: legacy-php71
     image: php:7.1-apache
     volumes:
       - ".:/var/www/html"
