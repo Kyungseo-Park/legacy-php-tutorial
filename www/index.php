@@ -125,7 +125,7 @@
                 </div>
                 <div class="col-8">
                     <h5 class="mt-0">Hello. My name is Kyungseo Park</h5>
-                    <pre><?php include '../include/profile.php';echo (htmlspecialchars($profile)); ?></pre>
+                    <script src="https://gist.github.com/Kyungseo-Park/62d1ceea21d262569a46b8e2cdbd0c18.js"></script>
                     <a href="https://github.com/kyungseo-park" target="_blank">깃허브 보러가기</a>
                 </div>
             </div>
