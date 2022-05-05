@@ -66,14 +66,52 @@
                         </div>
                     </div>
                 </div>
-                <?php } ?> 
+                <?php } ?>
             </div>
         </section>
         <!-- 최근 달린 리뷰(댓글 등) -->
         <section class="container section">
             <div class="row">
                 <h2>최근 달린 리뷰</h2>
-
+            </div>
+            <div class="row">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">제목이 들어갈 자리</h5>
+                            <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1">댓글이 뭐라 달렸을까용</p>
+                    </a>
+                    <a class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">제목이 들어갈 자리</h5>
+                            <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">댓글이 뭐라 달렸을까용</p>
+                    </a>
+                    <a class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">제목이 들어갈 자리</h5>
+                            <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">댓글이 뭐라 달렸을까용</p>
+                    </a>
+                    <a class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">제목이 들어갈 자리</h5>
+                            <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">댓글이 뭐라 달렸을까용</p>
+                    </a>
+                    <a class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">제목이 들어갈 자리</h5>
+                            <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">댓글이 뭐라 달렸을까용</p>
+                    </a>
+                </div>
             </div>
         </section>
         <!-- 프로필 정보 -->
