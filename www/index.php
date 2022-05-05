@@ -119,6 +119,17 @@
             <div class="row">
                 <h2>프로필 정보</h2>
             </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="/assets/profile.jpg" class="flex-shrink-0 me-3 img-thumbnail rounded" alt="프로필" />
+                </div>
+                <div class="col-8">
+                    <h5 class="mt-0">Hello. My name is Kyungseo Park</h5>
+                    <pre><?php include '../include/profile.php';echo (htmlspecialchars($profile)); ?></pre>
+                    <a href="https://github.com/kyungseo-park" target="_blank">깃허브 보러가기</a>
+                </div>
+            </div>
+            </div>
         </section>
     </main>
     <?php include "$_SERVER[DOCUMENT_ROOT]/include/footer.php"; ?>
