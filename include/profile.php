@@ -47,5 +47,3 @@ class About extends Me
     }
 }
 CODE;
-
-
