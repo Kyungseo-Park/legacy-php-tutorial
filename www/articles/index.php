@@ -23,13 +23,16 @@
                 </div>
             </div>
             <div class="content-body">
-
+                <?php 
+                    for ($i=0; $i < 3; $i++) {  ?>
+                    <img src="/assets/images.jpeg" alt="">
+                <?php } ?>
             </div>
             <div class="comment">
                 <div class="comment-header">
                     <!-- 로그인한 사용자만 댓글 작성이 가능 -->
                     <form action="" method="post">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="" id=""></textarea>
                         <button></button>
                         <input type="button" onclick="alert('로그인 해야함'); return false;" value="로그인">
                     </form>

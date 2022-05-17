@@ -10,4 +10,32 @@
     .card-item {
         padding: 10px;
     }
+
+    .content-header { 
+        display: flex;
+
+    }
+
+    .content-header > img {
+        width: 500px;
+        padding: 1rem 1rem;
+    }
+
+    .content-body {
+        text-align: center;
+    }
+    .content-body > img{
+        width: 800px;
+        padding: 10px;
+    }
+
+    .comment {
+        width: 1200px;
+    }
+    .comment-header > textarea {
+        width: 1000px;
+    }
+    .comment-header > button {
+        width: 180px;
+    }
 </style>
