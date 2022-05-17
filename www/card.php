@@ -7,21 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include "$_SERVER[DOCUMENT_ROOT]/include/style.php"; ?>
     <title>카드 디자인</title>
-    <style>
-        .pagination {
-            padding-top: 30px;
-        }
-        .card-item {
-            padding: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <?php include "$_SERVER[DOCUMENT_ROOT]/include/header.php"; ?>
-    <main class="container">
+    <main>
         <div class="container">
-             
+            <div class="row">
+                <img src="/assets/bn.jpg" class="img-fluid" alt="...">
+            </div>
         </div>
         <div class="container">
             <div class="row justify-content-center">
