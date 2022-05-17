@@ -21,15 +21,17 @@
             <div class="row justify-content-center">
                 <?php for ($i=0; $i < 16 ; $i++) { ?>
                 <div class="col-lg-3 col-md-6 col-12 card-item">
-                    <div class="card">
-                        <img class="card-img-top" src="/assets/images.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="fw-bold mb-1">제목이 들어갈 자리</p>
-                            <p class="fw-normal mb-1">한줄 소개가 들어갈 자리</p>
-                            <p class="fw-normal mb-1">스택이 들어갈 자리</p>
-                            <p class="fw-lighter mb-1">날짜가 들어갈 자리</p>
+                    <a href="/articles/index.php?id=<?= $i ?>">
+                        <div class="card">
+                            <img class="card-img-top" src="/assets/images.jpeg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="fw-bold mb-1">제목이 들어갈 자리</p>
+                                <p class="fw-normal mb-1">한줄 소개가 들어갈 자리</p>
+                                <p class="fw-normal mb-1">스택이 들어갈 자리</p>
+                                <p class="fw-lighter mb-1">날짜가 들어갈 자리</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <?php } ?>
             </div>
