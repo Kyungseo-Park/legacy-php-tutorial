@@ -19,13 +19,14 @@
         </div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-8">
+                <div class="col-12">
                     <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">제목</th>
                                 <th scope="col">작성자</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">스택</th>
                                 <th scope="col">작성일</th>
                             </tr>
                         </thead>
@@ -34,10 +35,38 @@
                             <tr>
                                 <th scope="row"><?= $i ?></th>
                                 <td>
-                                    <a href="/articles/index.php?id=<?= $i ?>">Mark</a>
+                                    작성자작성자
                                 </td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <td>
+                                    <a href="/articles/index.php?id=<?= $i ?>">제목제목제목제목제목제목제목제목제목제목제목</a>
+                                </td>
+                                <td>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">Python</span>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">Java</span>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">Amazon
+                                        S3</span>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">Kafka</span>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">Amazon
+                                        DynamoDB</span>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">Apache
+                                        Spark</span>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">Pandas</span>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">Airflow</span>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">Amazon
+                                        EMR</span>
+                                    <span
+                                        style="line-height: 2.0; text-overflow: ellipsis; white-space: nowrap; padding: 5px; border-radius: 15px; margin: 5px; background-color: antiquewhite;">DataGrip</span>
+                                </td>
+                                <td>2022. 05. 14</td>
                             </tr>
                             <?php } ?>
                         </tbody>

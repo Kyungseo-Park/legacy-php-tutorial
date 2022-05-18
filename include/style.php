@@ -43,13 +43,11 @@
 
     .card .body {
         color: #444;
-        padding: 20px;
         font-weight: 400;
     }
 
     .card .header {
         color: #444;
-        padding: 20px;
         position: relative;
         box-shadow: none;
     }
@@ -57,10 +55,6 @@
     .article {
         -webkit-transition: all .4s ease;
         transition: all .4s ease
-    }
-
-    .article .body {
-        padding: 30px
     }
 
     .article .img-post {
@@ -97,8 +91,9 @@
         display: block
     }
 
+    .article .body,
     .article .footer {
-        padding: 0 30px 30px 30px
+        padding: 10px 10px 10px 10px;
     }
 
     .article .footer .actions {
@@ -285,11 +280,6 @@
         .blog-page .article .footer .stats {
             float: none;
             margin-top: 10px
-        }
-
-        .blog-page .article .body,
-        .blog-page .article .footer {
-            padding: 30px
         }
     }
 </style>
