@@ -29,13 +29,4 @@
         padding: 10px;
     }
 
-    .comment {
-        width: 1200px;
-    }
-    .comment-header > textarea {
-        width: 1000px;
-    }
-    .comment-header > button {
-        width: 180px;
-    }
 </style>
