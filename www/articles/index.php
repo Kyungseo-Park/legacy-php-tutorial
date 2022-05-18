@@ -13,7 +13,7 @@
     <?php include "$_SERVER[DOCUMENT_ROOT]/include/header.php"; ?>
     <main>
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="content-header">
                         <img class="card-img-top" src="/assets/images.jpeg" alt="Card image cap">

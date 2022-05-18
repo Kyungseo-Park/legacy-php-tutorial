@@ -14,7 +14,7 @@
     <main>
         <!-- 매인 베너 -->
         <section class="container section">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"

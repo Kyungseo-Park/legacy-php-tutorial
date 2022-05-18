@@ -13,7 +13,7 @@
     <?php include "$_SERVER[DOCUMENT_ROOT]/include/header.php"; ?>
     <main>
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <img src="/assets/bn.jpg" class="img-fluid" alt="...">
             </div>
         </div>
