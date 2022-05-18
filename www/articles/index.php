@@ -45,7 +45,8 @@
                                 <label for="comment">댓글</label>
                                 <textarea class="form-control my-3" id="comment" rows="3"></textarea>
                                 <div class="text-end">
-                                    <input class="btn btn-primary" type="button" onclick="alert('로그인 해야함'); return false;" value="로그인">
+                                    <input class="btn btn-primary" type="button"
+                                        onclick="alert('로그인 해야함'); return false;" value="로그인">
                                 </div>
                             </div>
                         </form>
@@ -58,10 +59,48 @@
                             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                 <div class="d-flex justify-content-between">
                                     <strong class="text-gray-dark">이름</strong>
-                                    <a >답글</a>
+                                    <!-- 댓글달기 Start -->
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal_<?= $i ?>">답글</a>
+                                    <div class="modal fade" id="exampleModal_<?= $i ?>" tabindex="-1"
+                                        aria-labelledby="exampleModal_<?= $i ?>Label" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <form id="form_reply">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModal_<?= $i ?>Label">댓글 달기
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <textarea name="" id="" rows="3"
+                                                            class="form-control my-3"></textarea>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">저장</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 댓글달기 End -->
                                 </div>
                                 <span class="d-block">@kkyungvelyy</span>
-                                <p>kkyungvelyy</p>
+                                <p class="pt-2">kkyungvelyy</p>
+                            </div>
+                        </div>
+                        <!-- Reply 달기 -->
+                        <div class="d-flex text-muted pt-3" style="padding-left: 100px;">
+                            <img class="bd-placeholder-img flex-shrink-0 me-2 rounded"
+                                src="https://avatars.githubusercontent.com/u/45850400?v=4" width="100">
+                            <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                                <div class="d-flex justify-content-between">
+                                    <strong class="text-gray-dark">이름</strong>
+                                </div>
+                                <span class="d-block">@kkyungvelyy</span>
+                                <p class="pt-2">kkyungvelyy</p>
                             </div>
                         </div>
                         <?php } ?>
