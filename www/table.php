@@ -24,16 +24,18 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php for ($i=0; $i < 16 ; $i++) { ?>
                             <tr>
                                 <th scope="row"><?= $i ?></th>
-                                <td>Mark</td>
+                                <td>
+                                    <a href="/articles/index.php?id=<?= $i ?>">Mark</a>
+                                </td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
                             </tr>

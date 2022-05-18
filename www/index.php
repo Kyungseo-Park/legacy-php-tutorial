@@ -57,13 +57,15 @@
                 <?php for ($i=0; $i < 4 ; $i++) { ?>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/assets/images.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="fw-bold mb-1">제목이 들어갈 자리</p>
-                            <p class="fw-normal mb-1">한줄 소개가 들어갈 자리</p>
-                            <p class="fw-normal mb-1">스택이 들어갈 자리</p>
-                            <p class="fw-lighter mb-1">날짜가 들어갈 자리</p>
-                        </div>
+                        <a href="/articles/index.php?id=<?= $i ?>">
+                            <img class="card-img-top" src="/assets/images.jpeg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="fw-bold mb-1">제목이 들어갈 자리</p>
+                                <p class="fw-normal mb-1">한줄 소개가 들어갈 자리</p>
+                                <p class="fw-normal mb-1">스택이 들어갈 자리</p>
+                                <p class="fw-lighter mb-1">날짜가 들어갈 자리</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <?php } ?>
@@ -76,7 +78,7 @@
             </div>
             <div class="row">
                 <div class="list-group">
-                    <a class="list-group-item list-group-item-action">
+                    <a class="list-group-item list-group-item-action" href="/articles/index.php?id=<?= $i ?>">
                         <div class="d-flex w-100 justify-content-between">
                             <h5 class="mb-1">제목이 들어갈 자리</h5>
                             <small>3 days ago</small>
