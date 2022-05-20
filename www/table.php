@@ -25,7 +25,7 @@
         $current_page = $_GET['page'] ? $_GET['page'] : $first_page;
         $first_page_url = "$app_url?page=$first_page";
         $last_page_url = "$app_url?page=$last_page";
-?>
+    ?>
     <main>
         <div class="container">
             <div class="row justify-content-center">
