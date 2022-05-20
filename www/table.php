@@ -12,7 +12,7 @@
 <body>
     <?php include "$_SERVER[DOCUMENT_ROOT]/include/header.php"; ?>
     <?php 
-        $app_url = 'http://localhost/table.php';
+        $app_url = '/table.php';
         $total = 108;
         $per_page = 15;
         $first_page = 1;
