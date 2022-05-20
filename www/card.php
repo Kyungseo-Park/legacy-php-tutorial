@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-start">
                 <?php for ($i = $start_post; $i <= $end_post  ; $i++) { ?>
                 <div class="col-lg-3 col-md-6 col-12 card-item">
                     <a href="/articles/index.php?id=<?= $i ?>">
