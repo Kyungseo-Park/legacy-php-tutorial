@@ -64,10 +64,16 @@
                         </li>
                     <?php } ?>
                     <?php for ($i = 1; $i <= $last_page ; $i++) {  ?>
+                        <?php
+                            // 앞에 3개이상, 뒤에 5개 이상 있어야 함
+                        ?> 
                         <?php if ($i == $current_page ) { ?>
                             <li class="page-item active">
                                 <a href=<?= "$app_url?page=$i" ?> class="page-link"><?= $i ?></a>
                             </li>
+                        <?php
+                            // 앞에 5개 이상, 뒤에 3개 이하
+                        ?> 
                         <?php } else { ?>
                             <li class="page-item">
                                 <a href=<?= "$app_url?page=$i" ?> class="page-link"><?= $i ?></a>
