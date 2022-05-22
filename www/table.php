@@ -12,19 +12,37 @@
 <body>
     <?php include "$_SERVER[DOCUMENT_ROOT]/include/header.php"; ?>
     <?php 
-        $app_url = '/table.php';
-        $total = 108;
-        $per_page = 15;
-        $first_page = 1;
-        $last_page = ceil($total / $per_page);
-        $start_post = $_GET['page'] ? $_GET['page'] * $per_page - 14 : 1;
-        $end_post = $start_post + $per_page - 1;
-        if ($end_post >= $total) {
-            $end_post = $total;
+        $result = range(1, 208);
+        $page = $_GET['page'] ? $_GET['page'] : 1;
+        $countList = 12;
+        $countPage = 10;
+        $totalCount = count($result); 
+        $totalPage = $totalCount / $countList;
+
+        if ($totalCount % $countList > 0) {
+            $totalPage ++;
         }
-        $current_page = $_GET['page'] ? $_GET['page'] : $first_page;
-        $first_page_url = "$app_url?page=$first_page";
-        $last_page_url = "$app_url?page=$last_page";
+        if ($totalPage < $page) {
+            $page = $totalPage;
+        }
+        
+        $appUrl = '/table.php';
+        
+        $startPage = ceil($page / $countPage) * 10 + 1 - $countPage;
+        $endPage = ($startPage + $countPage - 1);
+        if($endPage > $totalPage) {
+            $endPage = $totalPage;
+        }
+
+        $prevPage = $page - 1;
+        $nextPage = $page + 1;
+
+        $startPost = $_GET['page'] ? $_GET['page'] * $countList - $countList + 1 : 1;
+        $endPost = $startPost + $countList - 1;
+
+        if ($endPost >= $totalCount) {
+            $endPost = $totalCount;
+        }
     ?>
     <main>
         <div class="container">
@@ -46,7 +64,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for ($i = $start_post; $i <= $end_post  ; $i++) { ?>
+                            <?php for ($i = $startPost; $i <= $endPost  ; $i++) { ?>
                             <tr>
                                 <th scope="row"><?= $i ?></th>
                                 <td>
@@ -94,18 +112,19 @@
                 <div class="col-md-8 col-12">
                     <nav aria-label="Page navigation">
                         <ul class="pagination justify-content-center">
-                            <?php if ($first_page == $current_page) { ?>
+                            <?php if ($page == 1) { ?>
                                 <!-- 첫 페이지인 경우 disabled -->
                                 <li class="page-item disabled">
                                     <a class="page-link" tabindex="-1" aria-disabled="true">Previous</a>
                                 </li>
                             <?php } else { ?>
                                 <li class="page-item">
-                                    <a class="page-link" href="<?= $first_page_url ?>" tabindex="-1" aria-disabled="true">Previous</a>
+                                    <a class="page-link" href="<?= $appUrl.'?page='.$prevPage ?>" tabindex="-1" aria-disabled="true">Previous</a>
                                 </li>
                             <?php } ?>
-                            <?php for ($i = 1; $i <= $last_page ; $i++) {  ?>
-                                <?php if ($i == $current_page ) { ?>
+                            <!-- 1 ~ 10, 11 ~ 20 형식으로 보여준다. -->
+                            <?php for ($i = $startPage; $i <= $endPage ; $i++) {  ?>
+                                <?php if ($i == $page ) { ?>
                                     <li class="page-item active">
                                         <a href=<?= "$app_url?page=$i" ?> class="page-link"><?= $i ?></a>
                                     </li>
@@ -115,14 +134,14 @@
                                     </li>
                                 <?php } ?>
                             <?php } ?> 
-                            <?php  if ($last_page == $current_page) { ?> 
+                            <?php  if ($page == floor($totalPage)) { ?> 
                                 <!-- 마지막 페이지인 경우 disabled -->
                                 <li class="page-item disabled">
                                     <a class="page-link">Next</a>
                                 </li>
                             <?php } else { ?>
                                 <li class="page-item">
-                                    <a class="page-link" href="<?= $last_page_url ?>" tabindex="-1" aria-disabled="true">Next</a>
+                                    <a class="page-link" href="<?= $appUrl.'?page='.$nextPage ?>" tabindex="-1" aria-disabled="true">Next</a>
                                 </li>
                             <?php } ?>
                         </ul>
